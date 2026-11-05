@@ -2,7 +2,7 @@ import logo from '../assets/logo-text.png'
 
 const Nav = () => {
     return (
-        <div className='grid grid-cols-3 container mx-auto mt-4 sticky'>
+        <div className='flex justify-between container mx-auto mt-4 sticky'>
             <nav>
                 <img src={logo} alt="" />
             </nav>

@@ -1,13 +1,18 @@
+import { useState } from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
+
 import logo from '../assets/logo-text.png'
 
 const Nav = () => {
 
-    
+    const [menuOpen, setMenuOpen] = useState(false)
+
     return (
-        <div className='flex justify-between container mx-auto mt-4 sticky'>
-            <nav>
+        <nav className='flex justify-between container mx-auto mt-4 sticky'>
+            <button><GiHamburgerMenu/></button>
+            <div>
                 <img src={logo} alt="" />
-            </nav>
+            </div>
             <ul className='hidden md:flex justify-between items-center gap-4'>
                 <li>Home</li>
                 <li>Technologies</li>
@@ -19,7 +24,7 @@ const Nav = () => {
                 <button className=''>Sign In</button>
                 <button className="btn btn-secondary rounded-full">Sign Up</button>
             </div>
-        </div>
+        </nav>
     );
 };
 

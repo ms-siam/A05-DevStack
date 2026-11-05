@@ -9,11 +9,16 @@ interface technologyProps {
 const Technologies = ({technologiesPromise}:technologyProps) => {
     const technologies = use(technologiesPromise)
     return (
-        <div className='grid grid-cols-3 container mx-auto gap-5'>
+        <section className='grid grid-cols-4 container mx-auto gap-6'>
+            <div className='col-span-3 grid grid-cols-3  gap-9'>
             {
                 technologies.map((Technology)=><TechnologyCard key={Technology.id} Technology={Technology}></TechnologyCard>)
             }
         </div>
+            <aside className='col-span-1'>
+                sidebar
+            </aside>
+        </section>
     );
 };
 

@@ -9,7 +9,8 @@ const Nav = () => {
 
     return (
         <nav className='flex justify-between container mx-auto mt-4 sticky'>
-            <button className='md:hidden'><GiHamburgerMenu/></button>
+            <button className='md:hidden'
+            onClick={()=>setMenuOpen(!menuOpen)}><GiHamburgerMenu/></button>
             <div>
                 <img src={logo} alt="" />
             </div>

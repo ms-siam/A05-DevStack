@@ -1,12 +1,14 @@
 import logo from '../assets/logo-text.png'
 
 const Nav = () => {
+
+    
     return (
         <div className='flex justify-between container mx-auto mt-4 sticky'>
             <nav>
                 <img src={logo} alt="" />
             </nav>
-            <ul className='flex justify-between items-center gap-4'>
+            <ul className='hidden md:flex justify-between items-center gap-4'>
                 <li>Home</li>
                 <li>Technologies</li>
                 <li>Projects</li>

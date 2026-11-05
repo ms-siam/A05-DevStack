@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { use } from 'react';
 import type { Technology } from '../../types/Technology';
 
 interface technologyProps {
@@ -6,6 +6,7 @@ interface technologyProps {
 }
 
 const Technologies = ({technologiesPromise}:technologyProps) => {
+    const technologies = use(technologiesPromise)
     return (
         <div>
             

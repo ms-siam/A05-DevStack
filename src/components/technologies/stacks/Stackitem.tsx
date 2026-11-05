@@ -1,8 +1,11 @@
 import React from 'react';
 import { IoMdClose } from "react-icons/io";
+import type { Technology } from '../../../types/Technology';
+interface TstackItems{
+    stackItems: Technology
+}
 
-
-const Stackitem = () => {
+const StackItem = (stackItem:TstackItems) => {
     return (
         <div>
             <img src="" alt="" />
@@ -15,4 +18,4 @@ const Stackitem = () => {
     );
 };
 
-export default Stackitem;
+export default StackItem;

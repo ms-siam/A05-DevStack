@@ -1,6 +1,7 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import type { Technology } from '../../types/Technology';
 import TechnologyCard from './TechnologyCard';
+import StackPanel from './stacks/StackPanel';
 
 interface technologyProps {
     technologiesPromise: Promise<Technology[]>
@@ -8,15 +9,26 @@ interface technologyProps {
 
 const Technologies = ({technologiesPromise}:technologyProps) => {
     const technologies = use(technologiesPromise)
+
+    const[inStack, SetInStack] = useState<Technology[]>([])
+
+    const handleInStack = (instack:Technology) =>{
+        SetInStack([...inStack, instack ])
+    }
+    
+
     return (
         <section className='grid grid-cols-4 container mx-auto gap-6'>
             <div className='col-span-3 grid grid-cols-3  gap-9'>
             {
-                technologies.map((Technology)=><TechnologyCard key={Technology.id} Technology={Technology}></TechnologyCard>)
+                technologies.map((technology)=><TechnologyCard key={technology.id}
+                 Technology={technology}
+                 isInStack={inStack.some((Technology:Technology) => Technology.id === technology.id)}
+                 onAdd={handleInStack}></TechnologyCard>)
             }
         </div>
             <aside className='col-span-1'>
-                sidebar
+                <StackPanel stackItems={inStack}></StackPanel>
             </aside>
         </section>
     );

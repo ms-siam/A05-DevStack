@@ -1,7 +1,7 @@
 import banner from '../assets/banner-stack.png'
 const Hero = () => {
     return (
-        <div className='grid grid-cols-2 container items-start my-7 mx-auto'>
+        <div className='grid grid-cols-2 container items-start px-3 my-7 mx-auto'>
             <div className="flex flex-col pt-20">
                 <h2 className='text-6xl font-semibold'>Build Your Ideal</h2>
                 <h2 className='text-6xl font-semibold mt-2'>

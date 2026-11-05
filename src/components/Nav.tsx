@@ -16,14 +16,14 @@ const Nav = () => {
                 <img src={logo} alt="" />
             </div>
             <ul className="hidden md:flex justify-between items-center gap-4">
-                <li>Home</li>
-                <li>Technologies</li>
-                <li>Projects</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li className="text-pink-500 font-semibold hover:text-purple-700 cursor-text">Home</li>
+                <li className="hover:text-pink-500 cursor-text">Technologies</li>
+                <li className="hover:text-pink-500 cursor-text">Projects</li>
+                <li className="hover:text-pink-500 cursor-text">About</li>
+                <li className="hover:text-pink-500 cursor-text">Contact</li>
             </ul>
             <div className="flex justify-end items-center gap-5">
-                <button className="">Sign In</button>
+                <button className="hover:text-pink-500 cursor-text">Sign In</button>
                 <button className="btn btn-secondary rounded-full">Sign Up</button>
             </div>
             {menuOpen && (

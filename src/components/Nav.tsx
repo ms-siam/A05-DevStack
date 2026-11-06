@@ -24,7 +24,7 @@ const Nav = () => {
                 <li className="hover:text-pink-500 cursor-text">Contact</li>
             </ul>
             <div className="flex justify-end items-center gap-5">
-                <button className="hover:text-pink-500 cursor-text">Sign In</button>
+                <button className="border-0 bg-transparent p-0 hover:text-pink-500 cursor-pointer focus:outline-none">Sign In</button>
                 <button className="btn btn-secondary rounded-full">Sign Up</button>
             </div>
             {menuOpen && (

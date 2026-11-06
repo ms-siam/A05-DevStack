@@ -38,7 +38,7 @@ const Technologies = ({ technologiesPromise }: technologyProps) => {
                 }
             </div>
             <aside className='col-span-1'>
-                <StackPanel stackItems={inStack} deleteInStack = {deleteInStack}></StackPanel>
+                <StackPanel stackItems={inStack} deleteInStack = {deleteInStack} removeAllFromStack = {removeAllFromStack}></StackPanel>
             </aside>
         </section>
     );

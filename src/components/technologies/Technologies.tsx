@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import { use, useState } from 'react';
 import type { Technology } from '../../types/Technology';
 import TechnologyCard from './TechnologyCard';
 import StackPanel from './stacks/StackPanel';

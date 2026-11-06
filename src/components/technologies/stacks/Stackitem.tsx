@@ -1,4 +1,3 @@
-import React from 'react';
 import { IoMdClose } from "react-icons/io";
 import type { Technology } from '../../../types/Technology';
 interface TstackItems {

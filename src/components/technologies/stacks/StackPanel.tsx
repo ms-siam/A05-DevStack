@@ -21,9 +21,9 @@ const StackPanel = ({ stackItems, deleteInStack, removeAllFromStack }: TstackIte
                         className='w-full border rounded-2xl my-2 border-gray-200 py-2 text-pink-600 font-bold hover:text-pink-700 cursor-text hover:bg-gray-200 transition-all duration-300 hover:-translate-y-1'>Remove All</button>
                 </>
             ) : (
-                <div className='flex flex-col justify-center items-center mt-8 py-10 mb-4 border border-dashed border-gray-300 rounded-2xl'>
-                <h3 className='font-semibold text-xl text-gray-500'>Your Stack Is Empty</h3>
-                <p className='font-light text-gray-400 mt-3'>Add technologies to build your stack</p>
+                <div className='flex flex-col justify-center items-center mt-8 py-10 px-4 mb-4 border border-dashed border-gray-300 rounded-2xl text-center'>
+                    <h3 className='font-semibold text-lg xl:text-xl text-gray-500'>Your Stack Is Empty</h3>
+                    <p className='font-light text-gray-400 mt-3'>Add technologies to build your stack</p >
                 </div>
             )}
         </div>

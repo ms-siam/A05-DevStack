@@ -6,15 +6,13 @@ interface TstackItems{
 }
 
 const StackItem = ({stackItem}:TstackItems) => {
-    console.log(stackItem)
-    console.log("StackItem received:", stackItem);
 
     return (
-        <div>
+        <div className='flex justify-between'>
             <img src={stackItem.icon} alt={stackItem.name} className='w-12 h-12' />
             <div>
-                <h2>we</h2>
-                <p></p>
+                <h2>{stackItem.name}</h2>
+                <p>{stackItem.category}</p>
             </div>
             <button><IoMdClose className="scale-125" /></button>
         </div>

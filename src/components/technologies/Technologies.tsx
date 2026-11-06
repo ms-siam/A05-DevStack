@@ -19,14 +19,18 @@ const Technologies = ({ technologiesPromise }: technologyProps) => {
     }
 
     const deleteInStack = (id:Technology['id']) => {
+        const deleted = inStack.find(item=> item.id===id)
         const remainingStack = inStack.filter(
             (stacked) => stacked.id != id,
         );
         SetInStack(remainingStack)
+        
+        if (deleted) toast.info(`${deleted.name} deleted from your stack!`)
     }
 
     const removeAllFromStack=() => {
         SetInStack([])
+        toast.info(`All stacks has been deleted from your stack!`)
     }
 
     return (

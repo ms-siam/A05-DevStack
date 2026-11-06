@@ -1,7 +1,7 @@
 import logo from '../assets/logo-text.png';
 
-const linkStyle = 'w-fit select-none text-[10px] text-gray-500 hover:text-pink-500 cursor-text';
-const headingStyle = 'text-[10px] font-semibold text-gray-900 uppercase';
+const linkStyle = 'w-fit select-none text-[15px] text-gray-500 hover:text-pink-500 cursor-text';
+const headingStyle = 'text-4 font-semibold text-gray-900 uppercase';
 
 const Footer = () => {
     return (

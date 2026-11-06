@@ -16,7 +16,7 @@ const Hero = () => {
                 </p>
                 <div className='flex items-center mt-10 gap-5'>
                     <button className='btn-gradient w-fit'>Explore Technologies</button>
-                    <button className="border border-gray-200 p-2 w-45 rounded-2xl hover:text-pink-500 hover:-translate-y-1 transition-all ">Learn More</button>
+                    <button className="border border-gray-200 p-2 w-45 rounded-2xl hover:text-pink-500 hover:-translate-y-1 duration-300 transition-all ">Learn More</button>
                 </div>
             </div>
 

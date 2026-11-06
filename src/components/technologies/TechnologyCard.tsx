@@ -2,17 +2,20 @@ import type { Technology } from '../../types/Technology';
 import { FaStar } from "react-icons/fa";
 import './TechnologyCard.css'
 interface TechnologyCardProps {
-  Technology: Technology;
-  isInStack: boolean;
-  onAdd: (Technology: Technology) => void;
+    Technology: Technology;
+    isInStack: boolean;
+    onAdd: (Technology: Technology) => void;
 }
-const TechnologyCard = ({Technology, isInStack, onAdd}: TechnologyCardProps) => {
+const TechnologyCard = ({ Technology, isInStack, onAdd }: TechnologyCardProps) => {
 
-    
+
 
 
     return (
-        <div className='border-2 border-gray-50 rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1'>
+        <div className={`border-2 rounded-2xl p-5 shadow-sm transition-all duration-300 ${isInStack
+                ? 'border-purple-500'
+                : 'border-gray-50 hover:shadow-xl hover:-translate-y-1'
+            }`}>
             <div className='flex justify-between items-center my-2'>
                 <img src={Technology.icon} alt={Technology.name} className='w-12 h-12' />
                 <span className='bg-gray-100 py-2 px-4 text-pink-500 rounded-full'>{Technology.badge}</span>
@@ -24,8 +27,16 @@ const TechnologyCard = ({Technology, isInStack, onAdd}: TechnologyCardProps) => 
                 <span className=''>{Technology.difficulty}</span>
                 <span className='flex items-center justify-between'><FaStar className='text-amber-300' />{Technology.rating}</span>
             </div>
-            <button disabled={isInStack}
-            onClick={() => onAdd(Technology)} className='btn-gradient w-full'>{isInStack ? '✓Added to Stack' : 'Add to Stack'}</button>
+            <button
+                disabled={isInStack}
+                onClick={() => onAdd(Technology)}
+                className={`btn-gradient relative w-full ${isInStack
+                    ? 'cursor-not-allowed after:content-[""] after:absolute after:inset-0 after:rounded-2xl after:bg-white/50'
+                    : ''
+                    }`}
+            >
+                {isInStack ? '✓ Added to Stack' : 'Add to Stack'}
+            </button>
         </div>
     );
 };

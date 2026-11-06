@@ -23,6 +23,10 @@ const Technologies = ({ technologiesPromise }: technologyProps) => {
         SetInStack(remainingStack)
     }
 
+    const removeAllFromStack=() => {
+        SetInStack([])
+    }
+
     return (
         <section className='grid grid-cols-4 container mx-auto gap-6'>
             <div className='col-span-3 grid grid-cols-3  gap-9'>

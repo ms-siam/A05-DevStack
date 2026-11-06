@@ -9,10 +9,10 @@ const headingStyle = 'text-4 font-semibold text-gray-900 uppercase';
 const Footer = () => {
     return (
         <footer className='container mx-auto mt-16 mb-12'>
-            <div className="grid gap-10 p-2 grid-cols-5 mb-10">
-                <div className="col-span-2 flex flex-col justify-start gap-8">
-                    <img src={logo} alt="" className='w-32' />
-                    <p className='w-120 text-gray-500'>Curated tools, technologies, and resources for developers building modern software.</p>
+            <div className="grid gap-10 p-2 grid-cols-1 md:grid-cols-5 mb-10">
+                <div className="md:col-span-2 flex flex-col justify-start gap-8">
+                    < img src={logo} alt="" className='w-32' />
+                    <p className='max-w-120 text-gray-500'>Curated tools, technologies, and resources for developers building modern software.</p >
                     <div className='flex justify-start gap-5'>
                         <a href="http://www.github.com/ms-siam" className={socialStyle}>GitHub</a>
                         <a href="http://www.x.com" className={socialStyle}>Twitter</a>

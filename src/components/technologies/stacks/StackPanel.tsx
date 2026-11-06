@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Technology } from '../../../types/Technology';
-import StackItem from './Stackitem';
+import StackItem from './StackItem';
 
 interface TstackItems {
     stackItems: Technology[]

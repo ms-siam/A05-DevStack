@@ -1,22 +1,30 @@
 import React from 'react';
 import { IoMdClose } from "react-icons/io";
 import type { Technology } from '../../../types/Technology';
-interface TstackItems{
+interface TstackItems {
     stackItem: Technology;
 }
 
-const StackItem = ({stackItem}:TstackItems) => {
+const StackItem = ({ stackItem }: TstackItems) => {
 
     return (
-        <div className='flex justify-between'>
-            <img src={stackItem.icon} alt={stackItem.name} className='w-12 h-12' />
-            <div>
-                <h2>{stackItem.name}</h2>
-                <p>{stackItem.category}</p>
+    <div className="flex justify-between items-center p-4 border border-gray-200 rounded-xl mb-3">
+        
+        <div className='flex items-center gap-4'>
+            <img src={stackItem.icon} alt={stackItem.name} className='w-10 h-10 object-contain' />
+            
+            <div className='flex flex-col'>
+                <h2 className='text-lg font-bold text-slate-800'>{stackItem.name}</h2>
+                <p className='text-sm text-slate-400 font-medium'>{stackItem.category}</p>
             </div>
-            <button><IoMdClose className="scale-125" /></button>
         </div>
-    );
+
+        <button className='text-slate-400 hover:text-slate-800 transition-colors p-2 cursor-pointer'>
+            <IoMdClose className="text-2xl" />
+        </button>
+
+    </div>
+);
 };
 
 export default StackItem;

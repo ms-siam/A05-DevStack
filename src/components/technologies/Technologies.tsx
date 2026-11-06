@@ -37,7 +37,7 @@ const Technologies = ({ technologiesPromise }: technologyProps) => {
                         onAdd={handleInStack}></TechnologyCard>)
                 }
             </div>
-            <aside className='col-span-1'>
+            <aside className='col-span-1 sticky z-10 top-25 self-start'>
                 <StackPanel stackItems={inStack} deleteInStack = {deleteInStack} removeAllFromStack = {removeAllFromStack}></StackPanel>
             </aside>
         </section>

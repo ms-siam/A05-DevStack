@@ -2,15 +2,15 @@ import banner from '../assets/banner-stack.png'
 import '../App.css'
 const Hero = () => {
     return (
-        <div className='grid grid-cols-2 container items-start px-3 my-7 mx-auto'>
-            <div className="flex flex-col pt-20">
+        <div className='flex flex-col md:grid md:grid-cols-2 container md:items-start md:px-3 md:my-7 mx-auto'>
+            <div className="flex flex-col items-center md:items-start md:pt-20">
                 <h2 className='text-6xl font-semibold'>Build Your Ideal</h2>
                 <h2 className='text-6xl font-semibold mt-2'>
                     <span className="inline-block bg-linear-to-r from-[#ff4000] via-[#E5004F] to-[#8000FF] bg-clip-text text-transparent">
                         Development Stack
                     </span>
                 </h2> 
-                <p className='font-light my-5'>Explore frontend, backend, database, and tooling options,<br />
+                <p className='font-light my-5 text-center'>Explore frontend, backend, database, and tooling options,
                     compare them side by side, and put together the stack that fits your
                     next project.
                 </p>

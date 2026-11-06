@@ -10,8 +10,8 @@ interface TstackItems {
 const StackPanel = ({stackItems, deleteInStack}:TstackItems) => {
     return (
         <div className='border border-gray-100 p-5 rounded-2xl'>
-            <h2>Your Stack</h2>
-            <p>{stackItems.length} Technologies Selected</p>
+            <h2 className='font-bold text-2xl my-1.5'>Your Stack</h2>
+            <p className='text-gray-500 text-xs mb-3'>{stackItems.length} Technologies Selected</p>
             {
                 stackItems.map((stackItem:Technology)=><StackItem key={stackItem.id} stackItem={stackItem} deleteInStack={deleteInStack}></StackItem>)
             }

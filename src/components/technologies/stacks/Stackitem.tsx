@@ -22,7 +22,7 @@ const StackItem = ({ stackItem, deleteInStack }: TstackItems) => {
         </div>
 
         <button className='text-slate-400 hover:text-slate-800 transition-colors p-2 cursor-pointer'
-        onClick={stackItem.id}>
+        onClick={()=> deleteInStack(stackItem.id)}>
             <IoMdClose className="text-2xl" />
         </button>
 

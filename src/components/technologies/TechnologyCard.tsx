@@ -25,7 +25,7 @@ const TechnologyCard = ({Technology, isInStack, onAdd}: TechnologyCardProps) => 
                 <span className='flex items-center justify-between'><FaStar className='text-amber-300' />{Technology.rating}</span>
             </div>
             <button disabled={isInStack}
-            onClick={() => onAdd(Technology)} className='btn-gradient'>{isInStack ? 'Added to Stack' : 'Add to Stack'}</button>
+            onClick={() => onAdd(Technology)} className='btn-gradient'>{isInStack ? '✓Added to Stack' : 'Add to Stack'}</button>
         </div>
     );
 };

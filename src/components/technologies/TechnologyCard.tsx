@@ -1,6 +1,6 @@
 import type { Technology } from '../../types/Technology';
 import { FaStar } from "react-icons/fa";
-
+import './TechnologyCard.css'
 interface TechnologyCardProps {
   Technology: Technology;
   isInStack: boolean;
@@ -25,9 +25,7 @@ const TechnologyCard = ({Technology, isInStack, onAdd}: TechnologyCardProps) => 
                 <span className='flex items-center justify-between'><FaStar className='text-amber-300' />{Technology.rating}</span>
             </div>
             <button disabled={isInStack}
-            onClick={() => onAdd(Technology)}
-            className='w-full font-semibold bg-linear-to-r from-[#ff4000] via-[#E5004F] to-[#8000FF] text-white hover:bg-linear-to-r hover:from-[#f05a28] hover:via-[#e42769] hover:to-[#923aea] hover:text-white py-2 px-4 rounded-2xl hover:-translate-y-0.5 hover:transition-all duration-300'>
-                Add to Stack</button>
+            onClick={() => onAdd(Technology)} className='btn-gradient'>{isInStack ? 'Added to Stack' : 'Add to Stack'}</button>
         </div>
     );
 };

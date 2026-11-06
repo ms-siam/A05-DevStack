@@ -9,7 +9,7 @@ const Nav = () => {
 
     return (
         <div className="sticky top-0 z-50  bg-white border-b border-gray-100">
-            <nav className="grid grid-cols-3 items-center p-4 container px-3 mx-auto mt-4">
+            <nav className="grid grid-cols-[1fr_auto_1fr] items-center p-4 container px-3 mx-auto mt-4">
             <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
                 {menuOpen ? <IoMdClose className="scale-125" /> : <GiHamburgerMenu />}
             </button>

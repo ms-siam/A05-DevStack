@@ -34,20 +34,20 @@ const Technologies = ({ technologiesPromise }: technologyProps) => {
     }
 
     return (
-        <section className='grid grid-cols-4 container mx-auto gap-6'>
-            <div className='col-span-3 grid grid-cols-3  gap-9'>
-                {
-                    technologies.map((technology) => <TechnologyCard key={technology.id}
-                        Technology={technology}
-                        isInStack={inStack.some((Technology: Technology) => Technology.id === technology.id)}
-                        onAdd={handleInStack}></TechnologyCard>)
-                }
-            </div>
-            <aside className='col-span-1 sticky z-10 top-25 self-start'>
-                <StackPanel stackItems={inStack} deleteInStack = {deleteInStack} removeAllFromStack = {removeAllFromStack}></StackPanel>
-            </aside>
-        </section>
-    );
+    <section className='grid grid-cols-1 lg:grid-cols-4 container mx-auto gap-6'>
+        <div className='lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9'>
+            {
+                technologies.map((technology) => <TechnologyCard key={technology.id}
+                    Technology={technology}
+                    isInStack={inStack.some((Technology: Technology) => Technology.id === technology.id)}
+                    onAdd={handleInStack}></TechnologyCard>)
+            }
+        </div>
+        <aside className='lg:col-span-1 lg:sticky lg:z-10 lg:top-25 lg:self-start'>
+            <StackPanel stackItems={inStack} deleteInStack = {deleteInStack} removeAllFromStack = {removeAllFromStack}></StackPanel>
+        </aside>
+    </section>
+);
 };
 
 export default Technologies;

@@ -1,4 +1,5 @@
 import banner from '../assets/banner-stack.png'
+import '../App.css'
 const Hero = () => {
     return (
         <div className='grid grid-cols-2 container items-start px-3 my-7 mx-auto'>
@@ -14,8 +15,8 @@ const Hero = () => {
                     next project.
                 </p>
                 <div className='flex items-center mt-10 gap-5'>
-                    <button className='bg-linear-to-r from-[#ff4000] via-[#E5004F] to-[#8000FF] text-white py-2 px-4 rounded-2xl'>Explore Technologies</button>
-                    <button className="border border-gray-200 p-2 w-45 rounded-2xl">Learn More</button>
+                    <button className='btn-gradient w-fit'>Explore Technologies</button>
+                    <button className="border border-gray-200 p-2 w-45 rounded-2xl hover:text-pink-500 hover:-translate-y-1 transition-all ">Learn More</button>
                 </div>
             </div>
 

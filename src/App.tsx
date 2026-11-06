@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import type { Technology } from './types/Technology'
 import Technologies from './components/technologies/Technologies'
 import Footer from './components/Footer'
+import { ToastContainer } from 'react-toastify'
 
 const technologiesPromise = async():Promise<Technology[]> => {
   const res = await fetch('/data.json')
@@ -22,6 +23,7 @@ function App() {
     <Technologies technologiesPromise={technologiesPromise()}></Technologies>
     </Suspense>
     <Footer></Footer>
+    <ToastContainer position='top-right' autoClose={2000}/>
     </>
     )
 }

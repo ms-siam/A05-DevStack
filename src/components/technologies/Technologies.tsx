@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import type { Technology } from '../../types/Technology';
 import TechnologyCard from './TechnologyCard';
 import StackPanel from './stacks/StackPanel';
+import { toast } from 'react-toastify';
 
 interface technologyProps {
     technologiesPromise: Promise<Technology[]>
@@ -14,6 +15,7 @@ const Technologies = ({ technologiesPromise }: technologyProps) => {
 
     const handleInStack = (instack: Technology) => {
         SetInStack([...inStack, instack])
+        toast.success(`${instack.name} added to your stack!`)
     }
 
     const deleteInStack = (id:Technology['id']) => {

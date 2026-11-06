@@ -15,7 +15,7 @@ const StackPanel = ({stackItems, deleteInStack, removeAllFromStack}:TstackItems)
             {
                 stackItems.map((stackItem:Technology)=><StackItem key={stackItem.id} stackItem={stackItem} deleteInStack={deleteInStack}></StackItem>)
             }
-            <button onClick={()=>{removeAllFromStack}}
+            <button onClick={()=>{removeAllFromStack()}}
             className='w-full border rounded-2xl my-2 border-gray-200 py-2 text-pink-600 font-bold hover:text-pink-700 cursor-text hover:bg-gray-200 transition-all 300ms hover:-translate-y-1'>Remove All</button>
         </div>
     );

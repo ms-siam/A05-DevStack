@@ -109,16 +109,7 @@
     "difficulty": "Beginner-Friendly",
     "badge": "Versatile"
   },
-  {
-    "id": "tailwindcss",
-    "name": "Tailwind CSS",
-    "category": "Styling",
-    "description": "A utility-first CSS framework for rapidly building custom, responsive user interfaces directly in markup.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Tailwind%20CSS.svg",
-    "rating": 4.8,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Utility-First"
-  },
+  
   {
     "id": "docker",
     "name": "Docker",
